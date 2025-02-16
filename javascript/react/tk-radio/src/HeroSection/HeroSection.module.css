@@ -1,0 +1,65 @@
+/* Overall Section Styling */
+.hero {
+    background-color: #1f1f1f;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Container */
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .heroContainer {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+  
+  /* Title */
+  .heroTitle {
+    font-size: 60px;
+    font-weight: bold;
+    color: #4a90e2;
+  }
+  
+  /* Description */
+  .heroDescription {
+    max-width: 350px;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Button */
+  .heroButton {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+  }
+  
+  .heroButton:hover {
+    background-color: #357ac8;
+  }
+  
+  /* Image */
+  .hero-image img {
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  }
+  
