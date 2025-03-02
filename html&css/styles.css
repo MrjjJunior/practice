@@ -51,6 +51,7 @@ body{
     width: 100%;
     background-color: gray;
     margin-bottom: 10px;
+    display: flex;
 }
 
 .sidebar {
@@ -59,7 +60,7 @@ body{
     min-height: 400px;
     line-height: 400px;
     background-color: orangered;
-    float: left;
+    margin-right: 10px;
 }
 
 .body-area {
@@ -68,7 +69,6 @@ body{
     line-height: 400px;
     min-height: 400px;
     background: green;
-    float: right;
 }
 
 .clearfix::after {

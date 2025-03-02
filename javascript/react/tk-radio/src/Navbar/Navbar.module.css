@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: center; /* aligns items horizontally to the center */
+    align-items:center;
+    gap: 30px;
+
+}
+
+.home img{
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.home:hover img{
+    /* 
+    background-color: #5B9FEA; */
+    transform: scale(1.5);
+    filter: brightness(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.home {
+    color: lightgray;
+    max-height: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.about {
+    color: lightgray;
+}
