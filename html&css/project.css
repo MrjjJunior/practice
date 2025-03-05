@@ -2,3 +2,14 @@
     display: flex;
     gap: 30px;
 }
+
+.card {
+    background-color: lightblue;
+}
+
+.nav {
+    display: flex;
+    background-color: lightblue;
+    max-width: 100%;
+    font-size: x-small;
+}
