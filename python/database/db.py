@@ -18,7 +18,6 @@ ats_results = database["ats_results"]
 try:
     client.admin.command("ping")
     print("Connected to MongoDB")
-    for user in users:
-        print(user)
+
 except Exception as e:
     print(f"Failed connection: {e}")
