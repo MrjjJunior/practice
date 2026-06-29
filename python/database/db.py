@@ -1,10 +1,24 @@
 from pymongo import MongoClient
 import os
+from dotenv import load_dotenv
 
-uri = f"mongodb+srv://Tshepiso:{os.environ.get("DB_PASSWORD")}@cluster0.72xvwbt.mongodb.net/?appName=Cluster0"
 
-client = MongoClient(uri)
+load_dotenv()
+
+print(os.getenv("URI"))
+client = MongoClient(f"{os.getenv("URI")}")
 
 database = client.get_database("resumeBuilder")
 
-print(database)
+resumes = database["resumes"]
+users = database["users"]
+job_description = database["job_descriptions"]
+ats_results = database["ats_results"]
+
+try:
+    client.admin.command("ping")
+    print("Connected to MongoDB")
+    for user in users:
+        print(user)
+except Exception as e:
+    print(f"Failed connection: {e}")
