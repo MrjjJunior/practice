@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-print(os.getenv("URI"))
+print(os.getenv("URI"), "\n")
 client = MongoClient(f"{os.getenv("URI")}")
 
-database = client.get_database("resumeBuilder")
+database = client.get_database("ResumeBuilder")
 
 resumes = database["resumes"]
 users = database["users"]
@@ -17,6 +17,8 @@ ats_results = database["ats_results"]
 
 try:
     client.admin.command("ping")
+    db = client.get_database("ResumeBuidler")
+    print(db.get_collection("users"))
     print("Connected to MongoDB")
 
 except Exception as e:
