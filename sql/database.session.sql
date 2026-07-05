@@ -1,0 +1,9 @@
+
+-- @block 
+CREATE TABLE Users(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE, 
+    bio TEXT, 
+    country VARCHAR(2)
+);
+
