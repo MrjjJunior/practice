@@ -2,7 +2,6 @@
 
 practicing python
 
-# etl.py
 ## Extract
 Pull data from multilpe data sources such as API'S
 

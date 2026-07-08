@@ -1,2 +1,0 @@
-# MongoDB Altas (cloud database)
-
