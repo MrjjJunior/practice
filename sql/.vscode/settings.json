@@ -14,6 +14,21 @@
             "password": "tshepiso",
             "database": "school",
             "name": "database"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "resumeBuilder",
+            "username": "tshepiso",
+            "database": "resumeBuilder",
+            "password": ""
         }
     ]
 }
