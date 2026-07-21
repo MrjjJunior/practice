@@ -33,3 +33,12 @@ def func():
     raise HTTPException(status_code=<code>, details=<string>)
 
 ```
+
+## Requests and Path Parameters
+
+limit is a parameter in list_items
+```
+curl -X GET 'http://127.0.0.1:8000/items?limit=3'
+```
+
+Still learning BaseModel

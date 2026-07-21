@@ -1,7 +1,13 @@
 from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 from typing import *
+
+
 app = FastAPI()
 
+class Item(BaseModel):
+    text: str = None
+    is_done: bool = False
 
 items = []
 
@@ -11,13 +17,18 @@ def root():
 
 
 @app.post("/items")
-def create_item(item: str) -> list:
+def create_item(item: Item) -> list: # create_item is path parameter , item qeury parameter
     items.append(item)
     return items
 
 
+@app.get("/items")
+def list_items(limit: int=10):
+    return items[0:limit]
+
+
 @app.get("/items/{item_id}")
-def get_item(item_id: int):
+def get_item(item_id: int) -> Item: # items_id = query parameter
     if item_id < len(items):
         # item = items[item_id]
         return items[item_id]
