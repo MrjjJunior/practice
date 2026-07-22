@@ -22,12 +22,12 @@ def create_item(item: Item) -> list: # create_item is path parameter , item qeur
     return items
 
 
-@app.get("/items")
+@app.get("/items", response_model=Item)
 def list_items(limit: int=10):
     return items[0:limit]
 
 
-@app.get("/items/{item_id}")
+@app.get("/items/{item_id}", response_model=Item)
 def get_item(item_id: int) -> Item: # items_id = query parameter
     if item_id < len(items):
         # item = items[item_id]
