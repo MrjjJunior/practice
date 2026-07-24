@@ -5,13 +5,13 @@ Focus on understanding the concepts.
 Topics:
 
 - [x]  What orchestration is
-- [ ]  System prompts
-- [ ]  Prompt engineering
-- [ ]  Role prompting
-- [ ]  Few-shot prompting
-- [ ]  Structured output
-- [ ]  JSON
-- [ ]  JSON Schema
+- [x]  System prompts
+- [x]  Prompt engineering
+- [x]  Role prompting
+- [x]  Few-shot prompting
+- [x]  Structured output
+- [x]  JSON
+- [x]  JSON Schema
 
 - What is orchestration?
 - What is prompt engineering?
@@ -63,3 +63,32 @@ User and System prompt
 ### What is prompt Engineering?
 
 Designing clear, structured instruction that guide the AI model to produce the desired output reliably.
+
+### Making a good prompt.
+
+1. Role
+2. Task
+3. Rules
+4. Format
+5. context
+
+giving example of the desired behavior will help
+
+prompt engineering is controlling ai behavior 
+
+### Prompt Injection Protection
+
+Strong system prompt
+
+
+Use clear delimiters:
+
+The model can more clearly distinguish between **your instructions** and **the user's content**.
+
+**Validate intent** only accept the known ones.  
+
+### Tokens
+
+- Prompts have token limits.
+- Long prompts cost more.
+- Long prompts take longer to process.
