@@ -35,5 +35,5 @@ def correct_data_types(response) -> bool:
 # print(type(valid_response["confidence"]))
 
 if __name__ == "__main__":
-    print(validate_intent(valid_response))
-    print(validate_intent(invalid_response))
+    print("Valid response:",validate_intent(valid_response))
+    print("Valid response",validate_intent(invalid_response))
