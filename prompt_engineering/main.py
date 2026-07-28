@@ -1,31 +1,53 @@
-from fastapi import FastAPI
-from typing import *
-from anthropic import Anthropic
-#
+from openai import OpenAI
+import os
+import sys
 
-app = FastAPI
-client = Anthropic()
-
-message = client.messages.create(
-    model="claude-3-5-haiku-20241022",
-    max_tokens=1000,
-    messages=[
-        {
-            "role": "user",
-            "content": "What should I search for to find the latest developments in renewable energy?",
-        }
-    ],
+client = OpenAI(
+    api_key=os.environ.get("GROQ_API_KEY"),
+    base_url= "https://api.groq.com/openai/v1/",
 )
 
-for block in message.content:
-    if block.type == "text":
-        print(block.text)
 
-# @app.post("/chat")
-# def user_prompt() -> String:
-#     usr = input(input("Hey!, how can I help ypou?"))
-#     return
+def userPrompt()-> str:
+    return input("> ")
 
 
+def main():
+    user = userPrompt()
+    print(getUserIntent(user))
+    
 
-# if __name__ == "__main__":
+def getUserIntent(user) -> dict:
+    """ Prompt the ai to get user intent """
+
+    response = client.responses.create(
+        model="openai/gpt-oss-20b",
+        input=f"""
+You are an insurance assistant.
+
+Your job is to identify the user's intent
+
+Here is the user prompt: {user}
+
+Available intents:
+- create_claim
+- update_address
+- check_claim_status
+
+Return ONLY valid JSON.
+
+Do not explain your reasoning.
+
+Use this json format:
+
+  "intent": "",
+  "confidence": 0,
+  "parameters": 
+
+"""
+    )
+
+    return response.output_text
+
+if __name__ == "__main__":
+    main()
