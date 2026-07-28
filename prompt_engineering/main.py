@@ -2,6 +2,7 @@ from openai import OpenAI
 import os
 import sys
 
+
 client = OpenAI(
     api_key=os.environ.get("GROQ_API_KEY"),
     base_url= "https://api.groq.com/openai/v1/",
@@ -14,8 +15,11 @@ def userPrompt()-> str:
 
 def main():
     user = userPrompt()
-    print(getUserIntent(user))
-    
+    intent = getUserIntent(user)
+    print(intent)
+
+
+
 
 def getUserIntent(user) -> dict:
     """ Prompt the ai to get user intent """
