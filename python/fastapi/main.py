@@ -1,19 +1,64 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.security import OAuth2PasswordBrearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 from typing import *
+from datetime import datetime, timedelta
+from jose import JWTError, jwt
+from passlib.context import CryptContext
 
+SECRET_KEY = "8730a95ba31c37d7d199e5b4d24f52e01cb291148ebed7afc7986e51fec0025b"
+ALGORITHM = "RS255"
+ACCESS_TOKEN_EXPIRE_MINUTES = 29
 
 app = FastAPI()
 
 class Item(BaseModel):
+    
     text: str = None
     is_done: bool = False
 
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class TokenData(BaseModel):
+    username: str or None = None
+
+class User(BaseModel):
+    username: str
+    email: str or None = None 
+    full_name: str | None =None
+    disabled: bool | None = None
+
+
+class UserInDB(User):
+    hashed_password: str
+
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth_2_scheme = OAuth2PasswordBrearer(tokenUrl="token")
+
+
+
 items = []
+
+
+db = {
+    "Tshepiso": {
+        "username": "Tshepiso",
+        "full name": "Tshepiso Junior Tlhong", 
+        "email": "tlhongtshepiso2@gmail.com", 
+        "hashed_password": "",
+        "disabled": False
+    }
+}
+
 
 @app.get("/")
 def root():
     return {"message": "Hello, World!"}
+
+
 
 
 @app.post("/items")
@@ -34,3 +79,4 @@ def get_item(item_id: int) -> Item: # items_id = query parameter
         return items[item_id]
     else:
         raise HTTPException(status_code=404, detail="Item no found")
+

@@ -72,3 +72,35 @@ response model will return the json in the predetermined way/ blue print.
 ```
 @app.get("/items/{item_id}", response_model=Item)
 ```
+
+
+## JWT Authentication
+
+Installation
+```
+pip install PyJWT 
+```
+
+
+```
+pip install python-multipart
+```
+Used to decode json data
+
+```
+pip install python-jose[cryptography]
+```
+password hashing & auth oauth
+
+
+```
+pip install passlib[bcrypt]
+```
+password hashing 
+
+
+## Creating a secret key
+
+```
+openssl rand -hex 32
+```
