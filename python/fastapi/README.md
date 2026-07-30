@@ -100,8 +100,17 @@ password hashing
 
 
 ## Creating a secret key
-
+HS256 secret key gen
 ```
 openssl rand -hex 32
 ```
 
+## RSA key-gen
+
+```
+# Generate private key
+openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+
+# Extract public key from private key
+openssl rsa -in private_key.pem -pubout -out public_key.pem
+```
