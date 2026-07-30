@@ -9,7 +9,7 @@ from passlib.context import CryptContext
 
 
 SECRET_KEY = "8730a95ba31c37d7d199e5b4d24f52e01cb291148ebed7afc7986e51fec0025b"
-ALGORITHM = "RS255"
+ALGORITHM = "HS256" #RS256 or HS256
 ACCESS_TOKEN_EXPIRE_MINUTES = 29
 
 app = FastAPI()
@@ -61,7 +61,7 @@ def authenticate_user(db, username:str, password:str):
     return user
 
 def create_access_token(data: dict, expires_delta: timedelta or None = None):
-    to_encode = data.cpoy()
+    to_encode = data.copy()
 
     if expires_delta:
         expire = datetime.utcnow() + expires_delta
@@ -137,7 +137,7 @@ db = {
         "username": "Tshepiso",
         "full name": "Tshepiso Junior Tlhong", 
         "email": "tlhongtshepiso2@gmail.com", 
-        "hashed_password": "",
+        "hashed_password": "$2b$12$Qh5ebvgobaYaXffyWz0Uf.sGiXN4MXCes8/8JLsOe2rw3Fe.FhM1y",
         "disabled": False
     }
 }
