@@ -27,3 +27,10 @@ A <b>Server</b> can be services such as Amazon Elastic Compute Cloud (EC2), a ty
 | 4. Performance Efficency  | |
 | 5. Cost Optimization      | |
 | 6. Sustainability         | |
+
+
+# IAM (Identity Access Management)
+
+Security management system included in every AWS account.
+
+# Simple Storage Server(Amazon S3)
