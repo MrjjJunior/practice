@@ -7,3 +7,6 @@ The streak shall never die. im at the monkey and river hackathon as we speak hop
 
 02 August:
 Updated TK SR radio, just put price table.
+
+04 August:
+Update the featured guest on Tk SR radio
