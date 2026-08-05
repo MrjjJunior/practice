@@ -33,4 +33,8 @@ A <b>Server</b> can be services such as Amazon Elastic Compute Cloud (EC2), a ty
 
 Security management system included in every AWS account.
 
+
 # Simple Storage Server(Amazon S3)
+
+Storage that is built to store and get any amount of data from anywhere anytime.
+No need to estimate storage , add file into a bucket and it will adjust to the amount of storage needed. 
