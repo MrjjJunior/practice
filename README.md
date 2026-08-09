@@ -17,4 +17,11 @@ I learn that that is in a different environment than the machine it's self. When
 so when running tests and file in IntelliJ they fail because of that. 
 
 08 August
-Yeah today i didn't get anything done. 
+Yeah today i didn't get anything done.
+
+
+09 August
+Just got Maven on window so i can run it in my intellij. Using Two operating systems is a hassle.
+So I actually had to go to Apache site to download it, than extract zip file and Set environment variables by just copying the path to the bin folder of the downloaded folder.
+
+
