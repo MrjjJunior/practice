@@ -53,6 +53,12 @@ Interactivte terminal inside this container
 ubuntu: image 
 ubuntu is the image we want to use.
 
+### creating without starting container
+
+```
+docker create --name <name of container> ubuntu
+```
+
 
 check ubuntu information 
 ```
