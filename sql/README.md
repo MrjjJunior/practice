@@ -27,6 +27,10 @@ mysql> describe <table_name>;
 This will desplay the fields in the tables.
 
 ## createing table
+```
+
+```
+
 
 ## adding row to table 
 
