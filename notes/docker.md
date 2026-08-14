@@ -9,7 +9,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-## images
+## Images
 vision snapshots that have all the dependencies and configs need for the application.
 it is a blue print.
 how to list available docker images
@@ -41,7 +41,7 @@ docker ps -a
 ps: process status
 -a: All
 
-### creating a container 
+### Creating a container 
 
 ```
 docker run -it ubuntu
@@ -53,7 +53,7 @@ Interactivte terminal inside this container
 ubuntu: image 
 ubuntu is the image we want to use.
 
-### creating without starting container
+### Creating without starting container
 
 ```
 docker create --name <name of container> ubuntu
@@ -65,7 +65,7 @@ check ubuntu information
 cat /etc/os-release
 ```
 
-### starting a container
+### Starting a container
 
 This will start the process 
 ```
@@ -73,5 +73,8 @@ docker start <container id >
 ```
 This will take you to the terminal of the container
  
-###
+### Docker Networking
+
+
+
 
