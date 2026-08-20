@@ -38,3 +38,11 @@ Security management system included in every AWS account.
 
 Storage that is built to store and get any amount of data from anywhere anytime.
 No need to estimate storage , add file into a bucket and it will adjust to the amount of storage needed. 
+
+
+# Lambda 
+Compute service that  allows you to focus on your code logic and not servers 
+
+
+
+The theory is confusing not gonna lie gang. : (
