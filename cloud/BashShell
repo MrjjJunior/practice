@@ -1,0 +1,16 @@
+
+A shell is an environment in which commands, programs, and shell scripts are run.
+
+### what is Bash ?
+Bash is a programming language for running commands.
+
+### Aliases
+
+syntax:
+```
+alias alias_name='command'
+```
+example :
+```
+$ alias ll='ls -l'
+```
