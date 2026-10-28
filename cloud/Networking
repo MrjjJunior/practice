@@ -1,0 +1,50 @@
+
+
+
+
+# Networking in the AWS cloud 
+
+|Traditional topology | AWS service |
+| --- | --- |
+
+
+### Amazon VPC
+used for logically isoloated section of amazon cloud.
+1. selecting ip range
+2. created subnets
+3. configurae route table and network gateway
+
+#### Why use Amazon VPC?
+Set up in minutes no tradtional data centers. \
+cost effective\
+secure, scalable and reliable.\
+create multiple VPC's to test configuratios
+
+### IP addressing in Amazon VPC
+
+
+Important concepts:
+
+CIDR block: A private range should be given from /16-/28
+Subnet: A range of IP addresses within a VPC
+
+
+### Subnet
+
+ Public subnet: traffic routed to an internet gateway by having a routetable that is associated with an internet gateway as route. 
+
+ private subnet: 
+
+
+### Security group
+
+it is a firewall at the EC2 instance level thate controls incoming trafiic. 
+
+- stateful
+- Blocks all traffic by default.
+
+
+### Network ACL
+it acts as a firewall at the subnet level.
+- allow all traffic by defaullt. 
+
